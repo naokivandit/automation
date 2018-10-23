@@ -8,10 +8,10 @@
   github
   circlrCI
   heroku
-  
+
   ここが入力フォーム!!!!
   <form action="/">
-    <input type="text">
+    <input type="text" readonly>
     <input type="submit">
   </form>
 </body>
