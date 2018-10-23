@@ -1,5 +1,4 @@
 version: 2
-
 jobs:
   build:
     docker:
@@ -10,7 +9,7 @@ jobs:
       - run:  bash .circleci/setup-heroku.sh
       - add_ssh_keys:
           fingerprints:
-          - "<メモした文字列>"
+          - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLOf+GCdGE1oJ7wE7qQd7ZopYWnaVm4S5xWNKlu1hnhjQPR4R2xzwv+SWCCKekvx9XBhOdMY4esEGX9ek+xvIjQ+eTYB1zZa+gpJ09GSfB58UZPgnrej+79F+BGr/67aX3VC1DtY28huKL/AHJJfVgz183sZScxECK3v0UkGaHyJMLXBgsOpwRbac0xEKdWRNfbpnU6aj65wBh4x6GapH3BUrHilxE7eONa0Jj2fB56YcphLo9gGxuAAUnBUJunsiN4DCgEp5T7Ws+0RCkgSZXWnnuMOGrfsQZ44AoO8zop/YFuRKhh5qETzW64UfLVkbfCosefSg1Jj5Ie/5HUj1F ishiinaoki@mac-book-air.local"
       - deploy:
           name: heroku deploy
           command: |
