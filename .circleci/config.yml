@@ -4,15 +4,7 @@ jobs:
     docker:
       - image: circleci/php:latest
     steps:
-      - checkout
-      - run: wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-      - run: bash .circleci/setup-heroku.sh
-      - add_ssh_keys:
-          fingerprints:
-          - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLOf+GCdGE1oJ7wE7qQd7ZopYWnaVm4S5xWNKlu1hnhjQPR4R2xzwv+SWCCKekvx9XBhOdMY4esEGX9ek+xvIjQ+eTYB1zZa+gpJ09GSfB58UZPgnrej+79F+BGr/67aX3VC1DtY28huKL/AHJJfVgz183sZScxECK3v0UkGaHyJMLXBgsOpwRbac0xEKdWRNfbpnU6aj65wBh4x6GapH3BUrHilxE7eONa0Jj2fB56YcphLo9gGxuAAUnBUJunsiN4DCgEp5T7Ws+0RCkgSZXWnnuMOGrfsQZ44AoO8zop/YFuRKhh5qETzW64UfLVkbfCosefSg1Jj5Ie/5HUj1F ishiinaoki@mac-book-air.local"
-      - deploy:
+      - run:
           name: heroku deploy
           command: |
-              if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                  git push heroku master
-              fi 
+            git push https://heroku:5314cd80-f0cb-434b-ba8e-899d645ef79d@git.heroku.com/heroku-automation-app
