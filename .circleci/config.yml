@@ -1,21 +1,19 @@
 version: 2
+
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5.0
+      - image:  circleci/php:7.1.8-browsers
     steps:
-      - run:
+      - checkout
+      - run:  wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+      - run:  bash .circleci/setup-heroku.sh
+      - add_ssh_keys:
+          fingerprints:
+          - "<メモした文字列>"
+      - deploy:
+          name: heroku deploy
           command: |
-            echo "This is first step"
-
-      - run:
-          command: echo "This is second step"
-          when: always
-
-      - run:
-          command: |
-            echo "This is first step"
-
-      - run:
-          command: echo "This is second step"
-          when: always
+              if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                  git push heroku master
+              fi 
