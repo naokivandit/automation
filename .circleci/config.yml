@@ -3,6 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/php:latest
+
+    phpunit:
+      - run:
+          command: phpunit testphpunit.php
     steps:
       - checkout
       - run: wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
