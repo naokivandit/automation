@@ -5,9 +5,9 @@
   <title>Document</title>
 </head>
 <body>
-  github
-  circlrCI
-  heroku
+  github<br>
+  circlrCI<br>
+  heroku<br>
 
   ここが入力フォーム!!!!
   <form action="/">
