@@ -10,4 +10,4 @@ jobs:
       - deploy:
           name: heroku deploy
           command: |
-            git push heroku master
+            git push https://git.heroku.com/heroku-automation-app.git master
