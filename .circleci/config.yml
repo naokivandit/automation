@@ -1,3 +1,13 @@
-test:
-  override:
-    - echo Hello World!
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.0
+    steps:
+      - run:
+          command: |
+            echo "This is first step"
+            exit 1
+      - run:
+          command: echo "This is second step"
+          when: always
