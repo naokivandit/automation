@@ -5,7 +5,7 @@
   <title>Document</title>
 </head>
 <body>
-  aaa
+  ここが入力フォーム
   <form action="/">
     <input type="text">
     <input type="submit">
