@@ -5,6 +5,10 @@
   <title>Document</title>
 </head>
 <body>
+  github
+  circlrCI
+  heroku
+  
   ここが入力フォーム!!!!
   <form action="/">
     <input type="text">
