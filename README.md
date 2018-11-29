@@ -1,0 +1,5 @@
+# automation
+git push
+pushを元にcircleci起動
+Seleniumが起動して自動でPHPunitでテストを行う
+テスト結果をslackに通知
