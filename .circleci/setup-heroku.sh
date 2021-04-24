@@ -7,7 +7,7 @@
  cat > ~/.netrc << EOF
  machine api.heroku.com
    login n.i.vandit0924@gmail.com
-   password 5314cd80-f0cb-434b-ba8e-899d645ef79d
+   password xxxxxxxxxxxxxxxxx
  EOF
 
  cat >> ~/.ssh/config << EOF
